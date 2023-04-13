@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+:root {
+  --toastify-color-success: hsl(var(--accent));
+}
+body {
+  background-image: url('../public/background-image.jpeg');
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.navbar h1 {
+  color: #f1356d;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+}
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Journal Entry */
+.entry-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.entry-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.entry-preview h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+.entry-preview a {
+  text-decoration: none;
+}
+
+/* Journal Entry Page */
+.EntryContent h2, p {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+.EntryContent div {
+  color: white;
+  margin: 20px 0;
+}
+.EntryContent button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+/* New Journal Entry */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.signup {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.signup label {
+  text-align: left;
+  display: block;
+  color: white;
+}
+.signup h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.signup input, .signup textarea, .signup select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.signup button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.login {
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.login label {
+  text-align: left;
+  display: block;
+  color: white;
+}
+.login h3 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.login input, .login textarea, .login select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.login button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+}
+.wrap {
+  margin-right: 90px;
+}
+.Toastify__toast-body {
+  font-size: var(--fs-300);
+}
+.footer{
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .navbar .links {
+    display: grid;
+    gap: 25px;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-content: center;
+  margin-right: 70px;
+  }
+  .home {
+    display: grid;
+    gap: 25px;
+    grid-auto-flow: row;
+  }
+  .wrap {
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  .home .wrap h2 {
+    font-size: 10px;
+  }
+}
