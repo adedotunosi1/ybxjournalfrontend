@@ -11,6 +11,7 @@
 }
 body {
   background-image: url('../public/background-image.jpeg');
+  background-repeat: inherit;
 }
 .navbar {
   padding: 20px;
@@ -146,6 +147,8 @@ body {
   max-width: 400px;
   text-align: center;
   margin-bottom: 40px;
+  justify-content: center;
+  margin: 0 auto;
 }
 .login label {
   text-align: left;
@@ -205,17 +208,43 @@ body {
   align-content: center;
   margin-right: 70px;
   }
+  .login input, .login textarea, .login select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px !important;
+  }
+  .signup input, .signup textarea, .signup select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px !important;
+  }
+  .create input, .create textarea, .create select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px !important;
+  }
   .home {
-    display: grid;
-    gap: 25px;
-    grid-auto-flow: row;
+    display: flex;
+    justify-content: center;
+ 
   }
   .wrap {
-    align-items: center;
     justify-content: center;
-    margin-left: 20px;
+    margin: 0 auto;
   }
-  .home .wrap h2 {
+  .wrap h2 {
     font-size: 10px;
   }
 }

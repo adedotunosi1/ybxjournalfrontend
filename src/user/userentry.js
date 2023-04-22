@@ -29,7 +29,7 @@ const UserEntry = () => {
                 <article>
                     
                     <h2> { entry.data.title }</h2>
-                    <p> {entry.data.image && <img src={entry.data.image} alt="uploaded image" /> } </p>
+                    <p> {entry.data.image && <img width={250} height={250} src={entry.data.image} alt="uploaded image" /> } </p>
                     <div>{ entry.data.body }</div>
                     <p>Written by: { entry.author || entry.data.aut } </p>
                     <button onClick={ deleteClick }>Delete</button>

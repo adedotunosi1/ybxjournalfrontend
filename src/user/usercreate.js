@@ -20,6 +20,8 @@ const UserCreate = () => {
         }).then(({data: {id, name, email}}) => {
          setUserData({id,name, email});
   });
+    
+     const imageLimit = 50 * 1024;
     const [title, setTitle] = useState('');
    const [body, setBody] = useState('');
    const history = useHistory();
@@ -29,7 +31,12 @@ const UserCreate = () => {
     const handleImageUpload = (event) => {
       const file = event.target.files[0];
       const reader = new FileReader();
-  
+      const fileSize = file.size;
+      if(fileSize > imageLimit){
+        toast.error('The selected image size is too large. Please use images below 50kb.')
+      } else {
+        setImage(file);
+      }
       reader.onload = () => {
         setImage(reader.result);
       };
@@ -85,7 +92,7 @@ const UserCreate = () => {
         color: "white"
       }}>Add Image </label>
       <input type="file" onChange={handleImageUpload} />
-        {image && <img src={image} alt="uploaded image" />}
+        {image && <img width={250} height={250} src={image} alt="uploaded image"  />}
       <button>Submit New Entry</button>
     </form>
   </div>

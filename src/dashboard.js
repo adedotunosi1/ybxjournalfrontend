@@ -36,6 +36,7 @@ export default function Dashboard() {
           return res.json();
       }).then((data) => {
        setdatas(data.data);
+       localStorage.setItem("userentries", datas);
        console.log(data.data);
 });
   }, []);

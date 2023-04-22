@@ -26,7 +26,6 @@ const Ul = styled.ul`
   }
 `;
 
-
 const RightNav = ({ open }) => {
    const isLoggedIn = window.localStorage.getItem("loggedIn");
     const removeuser = () => {
@@ -35,6 +34,16 @@ const RightNav = ({ open }) => {
         window.location = '/';
        
     }
+  /*  const navBarComponents = document.querySelectorAll('.navbar');
+
+navBarComponents.forEach(component => {
+  component.addEventListener('click', closeNavBar);
+});
+    function closeNavBar() {
+      const navBar = document.querySelector('.nav');
+      navBar.remove();
+    }
+*/
   return (
     <Ul open={open}>
     <div className="nav">
